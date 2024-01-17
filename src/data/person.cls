@@ -9,12 +9,13 @@ Property KEY As %Integer;
 
 Index Master On KEY [ IdKey ];
 
+/// ghghg
 /// Description
 ClassMethod pop() As %Status
 {
     Set sc = $$$OK
-    set ^tdaData(1) = "David,MARINKOVIC"
-    set ^tdaData(2) = "Claude,LI PUMA"
+    set ^data.person(1) = "David,MARINKOVIC"
+    set ^data.person(2) = "Claude,LI PUMA"
  
     Return sc
 }
@@ -87,13 +88,13 @@ Each Storage Definition can have more than one map.]]></Description>
 <Delimiter>","</Delimiter>
 <Piece>1</Piece>
 </Data>
-<Global>^tdaData</Global>
+<Global>^data.person</Global>
 <Subscript name="1">
 <Expression>{KEY}</Expression>
 </Subscript>
 <Type>data</Type>
 </SQLMap>
-<StreamLocation>^tdaDataS</StreamLocation>
+<StreamLocation>^data.personS</StreamLocation>
 <Type>%Storage.SQL</Type>
 }
 

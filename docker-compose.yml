@@ -10,3 +10,7 @@ services:
       - ./web:/opt/coffee/csp
       - ./tests:/opt/coffee/tests
       - ./:/irisdev/app
+      - ./data:/data
+      - ./irisdata:/irisdata
+    environment:
+      - ISC_DATA_DIRECTORY=/irisdata
