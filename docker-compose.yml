@@ -7,7 +7,7 @@ services:
     hostname: "fullstack"
     container_name: "fullstack"
     ports: 
-      - 52773
+      - 60000:52773
     volumes:
       - ./web:/opt/coffee/csp
       - ./tests:/opt/coffee/tests
