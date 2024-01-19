@@ -4,6 +4,8 @@ services:
     build: 
       context: .
     command: --check-caps false
+    hostname: "fullstack"
+    container_name: "fullstack"
     ports: 
       - 52773
     volumes:

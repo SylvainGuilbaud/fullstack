@@ -7,15 +7,19 @@ Property prenom As %String;
 
 Property KEY As %Integer;
 
+Property dateDebut As %Date(FORMAT = 4);
+
+Property allergique As %Boolean [ InitialExpression = 0 ];
+
+Property distance As %Double(SCALE = 3);
+
 Index Master On KEY [ IdKey ];
 
-/// ghghg
-/// Description
 ClassMethod pop() As %Status
 {
     Set sc = $$$OK
-    set ^data.person(1) = "David,MARINKOVIC"
-    set ^data.person(2) = "Claude,LI PUMA"
+    set ^data.person(1) = "David,MARINKOVIC,60000,1,123.67"
+    set ^data.person(2) = "Claude,LI PUMA,57000,0,456.89"
  
     Return sc
 }
@@ -80,6 +84,18 @@ Storage NewStorage1
 <![CDATA[Every class can only have 1 active Storage Definition.  
 Each Storage Definition can have more than one map.]]></Description>
 <SQLMap name="SimpleDataMap">
+<Data name="allergique">
+<Delimiter>","</Delimiter>
+<Piece>4</Piece>
+</Data>
+<Data name="dateDebut">
+<Delimiter>","</Delimiter>
+<Piece>3</Piece>
+</Data>
+<Data name="distance">
+<Delimiter>","</Delimiter>
+<Piece>5</Piece>
+</Data>
 <Data name="nom">
 <Delimiter>","</Delimiter>
 <Piece>2</Piece>

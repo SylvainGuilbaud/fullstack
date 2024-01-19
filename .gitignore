@@ -1,4 +1,6 @@
 .DS_Store
 /irisdata
+**/*IRIS.DAT
+**/*IRIS.lck
 
 
