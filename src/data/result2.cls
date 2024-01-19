@@ -25,6 +25,7 @@ ClassMethod insert(key As %Integer, column As %String, value As %String) As %Sta
     set result.value = value
     
     set sc = result.%Save()
+    write sc,!
     if sc {
         write !,"new result inserted in ",result.%Id(),!
     } else {
